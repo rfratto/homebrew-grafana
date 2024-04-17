@@ -4,6 +4,11 @@ class Alloy < Formula
     url "https://github.com/grafana/alloy/archive/refs/tags/v1.0.0.tar.gz"
     sha256 "422aa6ab7b9e606ebec2edcde79d6f26b6e648da85955fd1d5d08d6e33e7c537"
     license "Apache-2.0"
+
+  bottle do
+    root_url "https://ghcr.io/v2/rfratto/grafana"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma: "bdc75b93dd0f55c24f5bbb7b2bc7ecb5c1a86990040b5271f194481f99aac159"
+  end
   
     depends_on "go" => :build
     depends_on "node" => :build
